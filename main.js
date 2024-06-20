@@ -69,6 +69,20 @@ gsap.registerPlugin(ScrollTrigger);
 //   opecity: 0,
 // });
 
+gsap.to("h1", {
+  transform: "translateX(-100%)",
+  scrollTrigger: {
+    trigger: ".newcontainer",
+    scroller: "body",
+    markers: true,
+    start: "top 0%",
+    // end: "top%",
+    scrub: true,
+    pin: true,
+  },
+  duration: 3,
+});
+
 var nav = gsap.timeline();
 
 nav.from("h2", {
@@ -85,7 +99,7 @@ nav.from("h4", {
 
   stagger: 0.2,
 });
-nav.from(".normalBTN", {
+nav.from(".tooltip-container", {
   y: -30,
   opacity: 0,
   duration: 1,
