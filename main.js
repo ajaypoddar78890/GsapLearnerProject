@@ -80,7 +80,7 @@ gsap.to("h1", {
     scrub: true,
     pin: true,
   },
-  duration: 3,
+  duration: 5,
 });
 
 var nav = gsap.timeline();
@@ -101,7 +101,7 @@ nav.from("h4", {
 });
 nav.from(".tooltip-container", {
   y: -30,
-  opacity: 0,
+  // opacity: 0,
   duration: 1,
 
   stagger: 0.3,
@@ -132,4 +132,21 @@ gsap.from(".logo", {
     scrub: true,
   },
   duration: 2,
+});
+
+// /SVG animation //
+
+var path = " M 10 100 Q 250 100 1900 100";
+var Finalpath = "M 10 100 Q 250 100 1900 100";
+
+var data = document.querySelector(".newmodule");
+
+data.addEventListener("mousemove", function (dets) {
+  path = `M 10 100 Q 250 ${dets.y} 1900 100`;
+
+  gsap.to("svg path", {
+    attr: { d: path },
+    duration: 0.3,
+    ease: "power3.out",
+  });
 });

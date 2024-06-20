@@ -231,7 +231,13 @@ body {
 /* //newmodule */
 
 .newmodule {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
-  background-color: sandybrown;
+  background-color: rgb(17, 34, 63, 1);
+  padding: 50px, 50px;
 }
+
+
+
+
+
